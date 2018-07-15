@@ -94,7 +94,7 @@
 
     function generateHTML([h, v]) {
       return `
-        <div class="item h${h} v${v
+        <div class="item h${h} v${v}
           <img src="images/${randomNumber(12)}.jpg">
           <div class="item__overlay">
             <button>View → &rarr;</button>
@@ -108,6 +108,9 @@
     function randomNumber(limit) {
       return Math.floor(Math.random() * limit) + 1;
     }
+
+    const digits = Array.from({ length: 50}, () => [randomNumber(4), randomNumber(4)]);
+    console.log(digits);
 
   </script>
 
