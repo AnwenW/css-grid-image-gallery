@@ -90,7 +90,7 @@
     const overlayImage = overlay.querySelector('img');
     const overlayClose = overlay.querySelector('.close');
 
-    // generate item in html with horizontal + vertical dimension (to be input), image, and overlay with button
+    // generate item in html with horizontal and vertical dimensions (to be input), image, and overlay with button
 
     function generateHTML([h, v]) {
       return `
@@ -109,8 +109,15 @@
       return Math.floor(Math.random() * limit) + 1;
     }
 
+    // create array of 50 arrays/items, populated with random h and v values of between 1 and 4, to pass into generateHTML()
+
     const digits = Array.from({ length: 50}, () => [randomNumber(4), randomNumber(4)]);
-    console.log(digits);
+    // console.log(digits);
+
+    // map over each item in digits array, pass it to generateHTML(). join('') turns it into a string.
+
+    const html = digits.map(generateHTML).join('');
+    console.log(html);
 
   </script>
 
