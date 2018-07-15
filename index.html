@@ -145,7 +145,7 @@
 
     // create array of 50 arrays/items, populated with random h and v values of between 1 and 4, to pass into generateHTML()
 
-    const digits = Array.from({ length: 50}, () => [randomNumber(4), randomNumber(4)]);
+    const digits = Array.from({ length: 50}, () => [randomNumber(4), randomNumber(4)]).concat([ [1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1] ]);
     // console.log(digits);
 
     // map over each item in digits array, pass it to generateHTML(). join('') turns it into a string.
