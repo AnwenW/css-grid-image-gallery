@@ -181,6 +181,12 @@
       return Math.floor(Math.random() * limit) + 1;
     }
 
+    function handleClick(e) {
+      console.log(e.currentTarget);
+      const src = e.currentTarget.querySelector('img').src;
+      console.log(src);
+    }
+
     // create array of 50 arrays/items, populated with random h and v values of between 1 and 4, to pass into generateHTML()
 
     const digits = Array.from({ length: 50}, () => [randomNumber(4), randomNumber(4)]).concat([ [1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1] ]);
@@ -194,6 +200,12 @@
     // set innerhtml of the gallery to be const html;
 
     gallery.innerHTML = html;
+
+    // when item is clicked, show overlay image – with function handleClick
+
+    const items = document.querySelectorAll('.item');
+
+    items.forEach(item => item.addEventListener('click', handleClick));
 
   </script>
 
