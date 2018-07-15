@@ -182,10 +182,13 @@
     }
 
     function handleClick(e) {
-      console.log(e.currentTarget);
+      // console.log(e.currentTarget);
       const src = e.currentTarget.querySelector('img').src;
-      console.log(src);
+      // console.log(src);
+      overlayImage.src = src;
     }
+
+    
 
     // create array of 50 arrays/items, populated with random h and v values of between 1 and 4, to pass into generateHTML()
 
