@@ -63,7 +63,7 @@
       overflow: hidden;
 
       /* display grid of 1 on item, and 100% w/h on img, instead of position:absolute, to overlap img and crop to center (rather than cropping from top corner) */
-      
+
       display: grid;
       grid-template-columns: 1;
       grid-template-rows: 1;
@@ -75,6 +75,24 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    .item__overlay {
+      background: #ffc60032; /* yellow w/ 70% transparency */
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      position: relative;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .item__overlay button {
+      border: 2px solid white;
+      color: white;
+      text-transform: uppercase;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 5px;
     }
 
     /* don't need to style item.h1 to be 1 row size as this is the default */
