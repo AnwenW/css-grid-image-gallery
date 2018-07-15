@@ -94,12 +94,12 @@
 
     function generateHTML([h, v]) {
       return `
-        <div class="item h${h} v${v}
+        <div class="item h${h} v${v}">
           <img src="images/${randomNumber(12)}.jpg">
           <div class="item__overlay">
-            <button>View → &rarr;</button>
+            <button>View →</button>
           </div>
-        }"></div>
+        </div>
       `;
     }
 
@@ -118,6 +118,10 @@
 
     const html = digits.map(generateHTML).join('');
     console.log(html);
+
+    // set innerhtml of the gallery to be const html;
+
+    gallery.innerHTML = html;
 
   </script>
 
